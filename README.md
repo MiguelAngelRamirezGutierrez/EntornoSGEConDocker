@@ -56,3 +56,27 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+---
+
+## Clase 2: Instalación y Configuración de Laravel
+
+### 1. Entorno de Desarrollo y Dependencias
+- **Sistema Operativo:** Ubuntu (WSL2) / Docker Desktop
+- **Lenguaje:** PHP 8.3 con extensiones requeridas (`ext-xml`, `ext-sqlite3`)
+- **Gestor de Dependencias:** Composer 2.x
+- **Framework:** Laravel
+
+### 2. Pasos Realizados
+1. Verificación de versiones de PHP y Composer en el entorno WSL.
+2. Instalación de extensiones necesarias de PHP.
+3. Creación del proyecto Laravel con Composer.
+4. Organización del proyecto en la raíz del repositorio respetando el archivo `.gitignore`.
+5. Ejecución del servidor local con `php artisan serve`.
+6. Confirmación de acceso en el navegador (`http://127.0.0.1:8000`).
+
+### 3. Evidencias
+Ubicadas en la carpeta `/Clase2`:
+- `Captura 1`: Comprobación de versiones (`php -v` y `composer --version`).
+- `Captura 2`: Estructura de archivos (`ls -la`).
+- `Captura 3`: Pantalla de bienvenida de Laravel en el navegador.
