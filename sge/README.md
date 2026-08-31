@@ -101,3 +101,35 @@ Ubicadas en la carpeta `/Clase2`:
 
 ### 3. Evidencias
 Ubicadas en los archivos rar del repositorio
+
+# Entregable Semana 2: Instalación Laravel + Sail - Estructura y MVC
+
+## Capítulo 2: Instalación de Laravel
+
+### 1. Explicación de la estructura de carpetas
+- **app/**: Contiene la lógica central del negocio y la arquitectura de la aplicación (Controladores, Modelos, Middleware, etc.).
+- **config/**: Contiene todos los archivos de configuración del proyecto (base de datos, correo, servicios, etc.).
+- **database/**: Contiene las migraciones de tablas, fábricas (*factories*) y pobladores (*seeders*) para la base de datos.
+- **public/**: Punto de entrada HTTP para la aplicación (`index.php`) y lugar para activos públicos como imágenes, CSS y JS compilados.
+- **resources/**: Contiene las vistas Blade (`views`), además de los archivos de idioma y recursos JS/CSS fuente.
+- **routes/**: Define todas las rutas de la aplicación (`web.php` para la web, `console.php` para comandos Artisan).
+- **storage/**: Almacena logs del sistema, archivos cargados, caché de plantillas y sesiones.
+- **vendor/**: Contiene las dependencias de PHP administradas por Composer.
+
+### 2. Diagrama del flujo de una petición (MVC)
+```text
+[Usuario / Navegador]
+        │
+        ▼
+  [routes/web.php] ──► (Mapea la URL /dashboard)
+        │
+        ▼
+[DashboardController] ──► (Consulta métricas) ──► [Modelo User / DB (MySQL)]
+        │                                                     │
+        ◄────────── (Retorna datos al controller) ────────────┘
+        │
+        ▼
+[resources/views/dashboard/index.blade.php] ──► (Renderiza la vista HTML con Chart.js)
+        │
+        ▼
+  [Navegador]
