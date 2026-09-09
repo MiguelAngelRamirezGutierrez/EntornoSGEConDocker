@@ -1,14 +1,14 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\DashboardController; // <-- 1. Importa tu controlador aquí
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return redirect('/login');
 });
 
-// 2. Conecta la ruta del dashboard con DashboardController
 Route::get('/dashboard', [DashboardController::class, 'index'])
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
@@ -18,14 +18,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    // Módulo de Productos
+    // Módulo de Productos (Funcionando)
     Route::resource('products', ProductController::class)->names('products');
-    // Módulo de Categorías
-    Route::resource('categories', CategoryController::class)->names('categories');
-    // Módulo de Clientes
-    Route::resource('clients', ClientController::class)->names('clients');
-    // Módulo de Ventas
-    Route::resource('sales', SaleController::class)->names('sales');
 });
 
 require __DIR__ . '/auth.php';
