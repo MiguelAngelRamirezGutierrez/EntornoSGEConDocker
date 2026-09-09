@@ -75,11 +75,11 @@
             </label>
         </div>
 
-        <!-- Botón de Inicio de Sesión -->
+        <!-- Botón de Inicio de Sesión (Forzado con alta visibilidad) -->
         <div>
-            <button type="submit" class="w-full flex justify-center items-center gap-2 py-3 px-4 rounded-xl text-white font-semibold text-sm bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 active:scale-[0.99] shadow-lg shadow-blue-500/30 transition-all duration-200">
-                <i class="fa-solid fa-arrow-right-to-bracket"></i>
-                <span>Ingresar al Sistema</span>
+            <button type="submit" class="w-full flex justify-center items-center gap-2 py-3 px-4 rounded-xl text-white font-semibold text-sm bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 active:scale-[0.99] shadow-lg shadow-blue-500/30 transition-all duration-200 !opacity-100 !bg-blue-600">
+                <i class="fa-solid fa-arrow-right-to-bracket text-white"></i>
+                <span class="text-white">Ingresar al Sistema</span>
             </button>
         </div>
 
